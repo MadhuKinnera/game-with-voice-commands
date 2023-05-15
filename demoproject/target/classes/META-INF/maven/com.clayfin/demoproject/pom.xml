@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.clayfin</groupId>
+	<artifactId>demoproject</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>demoproject</name>
+
+	<dependencies>
+
+
+		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc10 -->
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc10</artifactId>
+			<version>19.18.0.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/net.sf.phat/sphinx4-core -->
+		<dependency>
+			<groupId>net.sf.phat</groupId>
+			<artifactId>sphinx4-core</artifactId>
+			<version>5prealpha</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.sf.phat/sphinx4-data -->
+		<dependency>
+			<groupId>net.sf.phat</groupId>
+			<artifactId>sphinx4-data</artifactId>
+			<version>5prealpha</version>
+		</dependency>
+
+
+	</dependencies>
+
+</project>
