@@ -1,5 +1,7 @@
-Left
-Right
-Up
-Down
-Stop
+LEFT
+RIGHT
+UP
+DOWN
+PATH
+STOP
+

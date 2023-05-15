@@ -22,7 +22,6 @@ public class Game {
 
 		// Scanner sc = new Scanner(System.in);
 
-		maze[currentRow][currentCol] = 'X';
 		printMaze(maze);
 
 //		while (true) {
@@ -54,21 +53,32 @@ public class Game {
 
 		boolean flag = false;
 
-		if (command.equals("LEFT") && isSafe(maze, currentRow, currentCol - 1)) {
+		if (command.equals("LEFT") && Path.isSafe(currentRow, currentCol - 1)) {
 			currentCol--;
 			flag = true;
 		}
-		if (command.equals("RIGHT") && isSafe(maze, currentRow, currentCol + 1)) {
+		if (command.equals("RIGHT") && Path.isSafe(currentRow, currentCol + 1)) {
 			currentCol++;
 			flag = true;
 		}
-		if (command.equals("UP") && isSafe(maze, currentRow - 1, currentCol)) {
+		if (command.equals("UP") && Path.isSafe(currentRow - 1, currentCol)) {
 			currentRow--;
 			flag = true;
 		}
-		if (command.equals("DOWN") && isSafe(maze, currentRow + 1, currentCol)) {
+		if (command.equals("DOWN") && Path.isSafe(currentRow + 1, currentCol)) {
 			currentRow++;
 			flag = true;
+		}
+
+		if (command.equals("PATH")) {
+			if (Path.solveMaze()) {
+				System.out.println("==============");
+				System.out.println("Path Exist ");
+				System.out.println("==============");
+			} else {
+				System.out.println("Path Dudent Exist");
+				return;
+			}
 		}
 
 		if (flag) {
@@ -79,11 +89,6 @@ public class Game {
 			printMaze(maze);
 		}
 
-	}
-
-	public boolean isSafe(char[][] maze, int row, int col) {
-		return (row >= 0 && row < maze.length && col >= 0 && col < maze.length
-				&& (maze[row][col] == '1' || maze[row][col] == 'X'));
 	}
 
 	public void printMaze(char[][] maze) {

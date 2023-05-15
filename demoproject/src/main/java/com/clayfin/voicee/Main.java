@@ -30,6 +30,8 @@ public class Main {
 		recognizer.startRecognition(true);
 
 		System.out.println("The Intial Maze is ");
+		Game.maze[0][0] = 'X';
+
 		game.printMaze(Game.maze);
 
 		System.out.println("Listening...");
